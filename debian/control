@@ -1,0 +1,21 @@
+Source: node-make-error
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Julien Puydt <jpuydt@debian.org>
+Section: javascript
+Priority: optional
+Build-Depends: debhelper-compat (= 13), jest <!nocheck>
+Standards-Version: 4.6.0
+Rules-Requires-Root: no
+Vcs-Browser: https://salsa.debian.org/js-team/node-make-error
+Vcs-Git: https://salsa.debian.org/js-team/node-make-error.git
+Homepage: https://github.com/JsCommunity/make-error
+
+Package: node-make-error
+Architecture: all
+Multi-Arch: foreign
+Depends: nodejs, ${misc:Depends}
+Description: error framework for JavaScript
+ This module provides an error toolkit for JavaScript,
+ compatible with both Node.js and a browser, supporting
+ instanceOf and compatible with the Content Security
+ Policy (CSP).

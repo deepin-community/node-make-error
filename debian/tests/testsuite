@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+tmpdir=$(mktemp -d -t node-make-error-temp-XXXXX)
+trap "rm -rf $tmpdir" 0 INT QUIT ABRT PIPE TERM
+
+cp package.json index.spec.js $tmpdir
+sed -i $tmpdir/index.spec.js -e "s|require(\"./\")|require('make-error')|g"
+cd $tmpdir
+jest --ci

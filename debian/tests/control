@@ -1,0 +1,7 @@
+Tests: require
+Restrictions: superficial
+Depends: @
+
+Tests: testsuite
+Restrictions: allow-stderr
+Depends: jest, @
